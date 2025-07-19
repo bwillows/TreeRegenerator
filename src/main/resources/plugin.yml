@@ -1,0 +1,15 @@
+name: TreeRegenerator
+version: '${project.version}'
+main: bwillows.treeregenerator.TreeRegenerator
+api-version: 1.13
+softdepend:
+  - WorldGuard
+commands:
+  treeregenerator:
+    description: Main command for TreeRegenerator
+    aliases:
+      - treeregen
+permissions:
+    treeregenerator.*:
+        description: Gives access to all the commands.
+        default: op

@@ -1,0 +1,23 @@
+regeneration-delay: 400 # Ticks
+
+# Whether to check for player-placed blocks near the tree
+# If true, trees will not regenerate if a player-placed block is found within radius
+# ( allows players to build near trees without affecting regeneration )
+prevent-if-player-blocks-nearby: true
+
+# Radius (in blocks) around the base of a tree to check for player-placed blocks
+player-block-check-radius: 10
+
+# If true, players cannot break trees while they are regenerating
+disable-while-regenerating: true
+
+# Misc data save to preseve regeneration state ( if applicable )
+data-save-interval: 300 # Seconds
+
+# Worlds in which trees can regenerate
+enabled-worlds:
+  - world
+
+# Regions where trees can regenerate
+enabled-regions:
+  - treefarm
