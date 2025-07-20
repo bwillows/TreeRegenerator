@@ -3,6 +3,7 @@ version: '${project.version}'
 main: bwillows.treeregenerator.TreeRegenerator
 api-version: 1.13
 softdepend:
+  - WorldEdit
   - WorldGuard
 commands:
   treeregenerator:

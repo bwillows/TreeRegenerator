@@ -9,7 +9,6 @@ TreeRegenerator automatically regenerates broken or damaged naturally generated 
 - Supports ( most ) custom world generators
 - Only regenerates naturally generated trees.
 - Player placed blocks within a 10 block radius optionally prevents trees from regenerating
-- Compatible with ( most ) TreeCapitator or TreeFeller plugins
 - Ignores player made structures
 
 ## Commands

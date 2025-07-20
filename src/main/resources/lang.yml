@@ -3,18 +3,20 @@ no-permission: "&cYou don't have permission to use this command"
 
 # Internal
 
+version: "%version%"
+
 no-argument:
-  - "&7Tree Regenerator %version% by Brooke Willows"
-  - "&7Use \"/treeregen help\" &7for a list of commands"
+  - "&aTree Regenerator %version% by Brooke Willows"
+  - "&aUse \"/treeregen help\" for a list of commands"
 invalid-argument:
   - "&cInvalid argument, try \"/treeregenen help\"?"
-invalid-format: "&cMalformed command, try \"/treeregenen help\"?"
+invalid-format: "&cMalformed command, try \"/treeregen help\"?"
 
 help:
-    - "&f- &e/treeregenen reload&r &7- reload the plugin"
-    - "&f- &e/treeregenen version&r &7- view the plugin version"
-    - "&f- &e/treeregenen regen&r &7 - regenerates all trees within your current chunk"
-    - "&f &e/treeregenen regen [world] [x] [z]&r &7- regenerates all trees at specified chunk"
+    - "&e/treeregen reload&r &7- reload the plugin"
+    - "&e/treeregen version&r &7- view the plugin version"
+    - "&e/treeregen regen&r &7 - regenerates all trees within your current chunk"
+    - "&e/treeregen regen [world] [x] [z]&r &7- regenerates all trees at specified chunk"
 
 renen-subcommand-console-sender: "&cConsole sender must specify world and chunk coordinates"
 
@@ -23,3 +25,4 @@ invalid-cord: "&cChunk coordinates must be integers"
 
 regen-success: "&aSuccessfully regenerated trees in chunk"
 regen-fail: "&cFailed to regenerate trees in chunk"
+

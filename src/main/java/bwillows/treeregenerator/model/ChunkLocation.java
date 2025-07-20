@@ -10,6 +10,8 @@ public class ChunkLocation {
     public String world;
     public int X;
     public int Z;
+    // often null
+    public Chunk chunk;
 
     public ChunkLocation(String world, int X, int Z) {
         this.world = world;

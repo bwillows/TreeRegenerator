@@ -25,6 +25,14 @@ public class TreeRegeneratorConfig {
         public int dataSaveInterval;
         public List<String> enabledWorlds;
         public List<String> enabledRegions;
+
+        public class removeOldWorlds {
+            public boolean enabled;
+            public int worldMaxAgeSeconds;
+        }
+
+        public removeOldWorlds removeOldWorlds = new removeOldWorlds();
+
     }
     public Settings settings = new Settings();
 
@@ -48,5 +56,8 @@ public class TreeRegeneratorConfig {
         settings.dataSaveInterval = configYml.getInt("data-save-interval");
         settings.enabledWorlds = configYml.getStringList("enabled-worlds");
         settings.enabledRegions = configYml.getStringList("enabled-regions");
+
+        settings.removeOldWorlds.enabled = configYml.getBoolean("remove-old-worlds.enabled");
+        settings.removeOldWorlds.worldMaxAgeSeconds = configYml.getInt("remove-old-worlds.world-max-age-seconds");
     }
 }

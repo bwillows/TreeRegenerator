@@ -2,8 +2,6 @@ package bwillows.treeregenerator.commands;
 
 import bwillows.treeregenerator.TreeRegenerator;
 import bwillows.treeregenerator.model.ChunkLocation;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -17,8 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TreeRegeneratorCommand implements CommandExecutor {
-    private static final Logger log = LogManager.getLogger(TreeRegeneratorCommand.class);
-
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
         if(!sender.hasPermission("treeregenerator.*")){
             String message = TreeRegenerator.instance.treeRegeneratorConfig.langYml.getString("no-permission");
@@ -34,7 +30,7 @@ public class TreeRegeneratorCommand implements CommandExecutor {
                 for(String line : message) {
                     if(line != null && !line.trim().isEmpty()) {
                         line = ChatColor.translateAlternateColorCodes('&', line);
-                        line.replace("%version%", TreeRegenerator.version);
+                        line = line.replace("%version%", TreeRegenerator.version);
                         sender.sendMessage(line);
                     }
                 }
@@ -150,7 +146,7 @@ public class TreeRegeneratorCommand implements CommandExecutor {
                         for(String line : message) {
                             if(line != null && !line.trim().isEmpty()) {
                                 line = ChatColor.translateAlternateColorCodes('&', line);
-                                line = line.replace("%version%", TreeRegenerator.version);
+                                line.replace("%version%", TreeRegenerator.version);
                                 sender.sendMessage(line);
                             }
                         }
@@ -180,12 +176,13 @@ public class TreeRegeneratorCommand implements CommandExecutor {
             return true;
             default:
                 {
+
                     List<String> message = TreeRegenerator.instance.treeRegeneratorConfig.langYml.getStringList("no-argument");
                     if(message != null) {
                         for(String line : message) {
                             if(line != null && !line.trim().isEmpty()) {
-                                line = ChatColor.translateAlternateColorCodes('&', line);
                                 line = line.replace("%version%", TreeRegenerator.version);
+                                line = ChatColor.translateAlternateColorCodes('&', line);
                                 sender.sendMessage(line);
                             }
                         }
